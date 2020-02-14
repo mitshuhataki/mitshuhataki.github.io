@@ -1,36 +1,85 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>K A I T O // 💙 </title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="css/style.css">
-
-
-
-<link rel="stylesheet" type="text/scss" href="css/kaito.scss">
-
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>K A I T O </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
-<body>
- 
-  <canvas id="canvas"></canvas>
-<div id="text">
-  <h1></h1>
-</div>
 
-<div class="play-music">
-  <div id="music-animation" class="music-animation">
-    <span class="bar bar1"></span>
-    <span class="bar bar2"></span>
-    <span class="bar bar3"></span>
-    <span class="bar bar4"></span>
-    <span class="bar bar5"></span>
-  </div>
-  <div class="music-toggle"><a onClick="togglePlay()" id="toggle" data-text-swap="Music on">Music off</a></div>
-</div>
-<audio id="music" loop="loop" src="https://listen.moe/fallback"></audio>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="script/script.js"></script>
-  <script  src="script/particle.js"></script>
+<body>
+
+    
+  
+    <div id="app-cover">
+        <div id="bg-artwork"></div>
+        <div id="bg-layer"></div>
+        <div id="player">
+            <div id="player-track">
+                <div id="album-name"></div>
+                <div id="track-name"></div>
+                <div id="track-time">
+                    <div id="current-time"></div>
+                    <div id="track-length"></div>
+                </div>
+                <div id="s-area">
+                    <div id="ins-time"></div>
+                    <div id="s-hover"></div>
+                    <div id="seek-bar"></div>
+                </div>
+            </div>
+            <div id="player-content">
+                <div id="album-art">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_1.jpg" class="active" id="_1">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_2.jpg" id="_2">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_3.jpg" id="_3">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_4.jpg" id="_4">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_5.jpg" id="_5">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_6.jpg" id="_6">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_7.jpg" id="_7">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_8.jpg" id="_8">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_9.jpg" id="_9">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_10.jpg" id="_10">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_11.jpg" id="_11">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_12.jpg" id="_12">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_13.jpg" id="_13">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_14.jpg" id="_14">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_15.jpg" id="_15">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_16.jpg" id="_16">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_17.jpg" id="_17">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_18.jpg" id="_18">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_19.jpg" id="_19">
+                    <img src="https://raw.githubusercontent.com/anilchauhanxda/anilchauhanxda.github.io/master/img/_20.jpg" id="_20">
+
+
+                    <div id="buffer-box">Buffering ...</div>
+                </div>
+                <div id="player-controls">
+                    <div class="control">
+                        <div class="button" id="play-previous">
+                            <i class="fas fa-backward"></i>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="button" id="play-pause-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="button" id="play-next">
+                            <i class="fas fa-forward"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/script.js"></script>
+
 </body>
 </html>
