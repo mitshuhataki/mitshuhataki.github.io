@@ -1,3 +1,12 @@
+
+
+body
+{
+    font-family: Helvetica, Arial;
+    margin: 0;
+    background-color: #ffeff5;
+}
+
 #app-cover
 {
     position: absolute;
@@ -8,6 +17,7 @@
     height: 100px;
     margin: -4px auto;
 }
+
 
 
 
@@ -327,9 +337,6 @@ body
 }
 
 
-
-
-
 #player
 {
     position: relative;
@@ -621,3 +628,14 @@ body
 {
     color: #fff;
 }
+
+.anime {
+   
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-right: auto;
+  margin-left: auto;
+    
+  }
